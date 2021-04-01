@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div>
+<form th:action="@{/queryUserById}" method="post">
+    <input type="hidden"/>
+    用户id：<input type="text" name="id"/><br/>
+    <input type="submit" value="查询"/>
+</form>
+</div>
+</body>
+</html>

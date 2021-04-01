@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/addUser}" method="post">
+    id:<input type="text" name="id"/><br/>
+    name:<input type="text" name="name" class="form-control"/><br/>
+    password:<input type="password" name="password" class="form-control"><br/>
+    tel:<input type="text" name="tel"><br/>
+    <br>
+    <input type="submit" value="提交"/>
+</form>
+
+</body>
+</html>

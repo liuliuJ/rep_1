@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>password</th>
+        <th>tel</th>
+    </tr>
+    <tr th:each="user:${alluser}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.password}"></td>
+        <td th:text="${user.tel}"></td>
+        <!--
+        <td><a th:href="@{/user/findUserById(id=${user.id})}">更新</a></td>
+        <td><a th:href="@{/user/delete(id=${user.id})}">删除</a></td>
+        -->
+    </tr>
+</table>
+<br>
+<a class="add" value="添加" th:href="@{/addUser}">添加</a>
+
+<a class="search" value="查找" th:href="@{/queryUserById}">查找</a>
+
+</body>
+</html>
